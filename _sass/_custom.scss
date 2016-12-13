@@ -1,3 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif;
+}
+
+.highlighter-rouge {
+  padding: 0.4rem 0.6rem;
+  margin: 0;
+  font-size: 90%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
 .container {
   @include container-fixed;
 
