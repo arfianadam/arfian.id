@@ -145,3 +145,36 @@ header {
 		}
 	}
 }
+
+aside, footer {
+	@include container-fixed;
+	border-bottom: 1px solid #ededed;
+	background: #fafafa;
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+
+			a {
+				padding: 20px 30px;
+				display: inline-block;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid #ededed;
+	.social	{
+		a {
+			padding: 10px 20px;
+			font-size: 3rem;
+		}
+	}
+}
