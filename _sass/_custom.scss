@@ -167,6 +167,21 @@ aside, footer {
 			}
 		}
 	}
+
+	&.fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+}
+
+.aside-fill {
+	height: 60px;
+	display: none;
+
+	&.fixed {
+		display: block;
+	}
 }
 
 footer {
