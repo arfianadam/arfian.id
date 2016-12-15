@@ -39,3 +39,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+  - node_modules
+  - package.json
+  - yarn.lock
+  - bower.json
+  - gulpfile.js
