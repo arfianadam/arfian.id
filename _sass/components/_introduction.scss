@@ -4,7 +4,7 @@
 
 	.container {
 		position: relative;
-		padding: 8rem 0;
+		padding: 8rem 15px;
 		background: url('/img/intro.png');
 		background-size: auto 80%;
 		background-position: left center;
@@ -14,10 +14,27 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			right: 0;
+			bottom: 0;
 			width: 100%;
 			height: 100%;
+			display: block;
 			content: "";
-			background: rgba(39,40,34,0.5);
+			z-index: 2;
+			@media (max-width: $screen-sm-min) {
+				background-color: rgba(39,40,34,0.8);
+			}
+		}
+
+		.side-half-right {
+			width: 100%;
+			float: none;
+			position: relative;
+			z-index: 3;
+			@media (min-width: $screen-sm-min) {
+				width: 50%;
+				float: right;
+			}
 		}
 	}
 }
