@@ -21,19 +21,25 @@
 			display: block;
 			content: "";
 			z-index: 2;
-			@media (max-width: $screen-sm-min) {
+			@media (max-width: $screen-md-min) {
 				background-color: rgba(39,40,34,0.8);
+			}
+			@media (max-width: $screen-sm-min) {
+				background-color: rgba(39,40,34,0.95);
 			}
 		}
 
 		.side-half-right {
-			width: 100%;
-			float: none;
+			width: 50%;
+			float: right;
 			position: relative;
 			z-index: 3;
-			@media (min-width: $screen-sm-min) {
-				width: 50%;
-				float: right;
+			@media (max-width: $screen-sm-min) {
+				width: 100%;
+				float: none;
+				h1, p {
+					text-align: center;
+				}
 			}
 		}
 	}
