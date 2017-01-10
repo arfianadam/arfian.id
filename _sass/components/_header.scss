@@ -1,0 +1,120 @@
+header {
+	@include container-fixed;
+	position: relative;
+	height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// background: url('../img/header-bg.jpeg');
+	// background-size: cover;
+	// background-position: center;
+
+	&:before {
+		background: rgba(255,255,255,0.7);
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+
+	.header-container {
+		display: inline-block;
+		text-align: center;
+		position: relative;
+
+		.thumb, .detail {
+			display: inline-block;
+		}
+
+		.thumb {
+			margin-right: 2rem;
+			position: relative;
+
+			@media (max-width: $screen-sm-min) {
+				margin: 0;
+			}
+
+			.spinner {
+				opacity: 0;
+				transition: all 0.5s;
+
+				@media (max-width: $screen-sm-min) {
+				}
+			}
+
+			img {
+				position: relative;
+				width: 150px;
+				height: 150px;
+				border-radius: 100%;
+				border: 8px solid rgba(0,0,0,0.1);
+			}
+
+			&:hover {
+				.spinner {
+					opacity: 1;
+				}
+			}
+		}
+
+		.detail {
+			text-align: left;
+			position: relative;
+			top: 18px;
+
+			@media (max-width: $screen-sm-min) {
+				display: block;
+				text-align: center;
+			}
+
+			code {
+				display: inline-block;
+				margin-bottom: 5px;
+				background-color: rgba(0,0,0,0.1);
+			}
+		}
+	}
+}
+
+.spinner {
+	width: 150px;
+	height: 150px;
+
+	position: absolute;
+
+	.double-bounce1, .double-bounce2 {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: #1c9ede;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+		animation: sk-bounce 2.0s infinite ease-in-out;
+	}
+
+	.double-bounce2 {
+		-webkit-animation-delay: -1.0s;
+		animation-delay: -1.0s;
+	}
+
+	@-webkit-keyframes sk-bounce {
+		0%, 100% { -webkit-transform: scale(0.0) }
+		50% { -webkit-transform: scale(1.0) }
+	}
+
+	@keyframes sk-bounce {
+		0%, 100% { 
+			transform: scale(0.0);
+			-webkit-transform: scale(0.0);
+		} 50% { 
+			transform: scale(1.0);
+			-webkit-transform: scale(1.0);
+		}
+	}
+}
