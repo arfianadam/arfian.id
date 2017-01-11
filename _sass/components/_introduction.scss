@@ -1,10 +1,11 @@
 #introduction {
-	background: #272822;
-	color: #F8F8F2;
+	background: $black;
+	color: $white;
 
 	.container {
 		position: relative;
-		padding: 16rem 15px;
+		padding-top: 16rem;
+		padding-bottom: 16rem;
 		background: url('/img/intro.png');
 		background-size: auto 54%;
 		background-position: left center;
@@ -52,6 +53,9 @@
 			}
 			p {
 				line-height: 2.4;
+			}
+			code {
+				background-color: rgba(255, 255, 255, 0.06);
 			}
 		}
 	}

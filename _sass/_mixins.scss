@@ -1,5 +1,6 @@
 .container {
 	@include container-fixed;
+	padding: 0 15px;
 
 	@media (min-width: $screen-sm-min) {
 		width: $container-sm;
@@ -10,9 +11,4 @@
 	@media (min-width: $screen-lg-min) {
 		width: $container-lg;
 	}
-}
-
-.side-half-right {
-	width: 50%;
-	float: right;
 }
