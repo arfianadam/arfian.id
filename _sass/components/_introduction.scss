@@ -4,11 +4,20 @@
 
 	.container {
 		position: relative;
-		padding: 8rem 15px;
+		padding: 16rem 15px;
 		background: url('/img/intro.png');
-		background-size: auto 80%;
+		background-size: auto 54%;
 		background-position: left center;
 		background-repeat: no-repeat;
+		@media (max-width: $screen-lg-min) {
+			background-size: auto 42%;
+		}
+		@media (max-width: $screen-md-min) {
+			background-size: auto 28%;
+		}
+		@media (max-width: $screen-sm-min) {
+			background-size: auto 70%;
+		}
 
 		&:before {
 			position: absolute;
@@ -22,7 +31,7 @@
 			content: "";
 			z-index: 2;
 			@media (max-width: $screen-md-min) {
-				background-color: rgba(39,40,34,0.8);
+				background-color: rgba(39,40,34,0);
 			}
 			@media (max-width: $screen-sm-min) {
 				background-color: rgba(39,40,34,0.95);
@@ -40,6 +49,9 @@
 				h1, p {
 					text-align: center;
 				}
+			}
+			p {
+				line-height: 2.4;
 			}
 		}
 	}
