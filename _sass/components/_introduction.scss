@@ -3,6 +3,7 @@
 	color: $white;
 
 	.container {
+		@include container();
 		position: relative;
 		padding-top: 16rem;
 		padding-bottom: 16rem;

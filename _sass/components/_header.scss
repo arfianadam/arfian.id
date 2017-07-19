@@ -20,59 +20,61 @@ header {
 	}
 
 	.header-container {
-		display: inline-block;
-		text-align: center;
+		@include container;
 		position: relative;
 
-		.thumb, .detail {
-			display: inline-block;
-		}
+		.header-component {
+			max-width: 360px;
 
-		.thumb {
-			margin-right: 2rem;
-			position: relative;
-
-			@media (max-width: $screen-sm-min) {
-				margin: 0;
-			}
-
-			.spinner {
-				opacity: 0;
-				transition: all 0.5s;
+			.thumb {
+				position: relative;
 
 				@media (max-width: $screen-sm-min) {
+					text-align: center;
 				}
-			}
 
-			img {
-				position: relative;
-				width: 150px;
-				height: 150px;
-				border-radius: 100%;
-				border: 8px solid rgba(0,0,0,0.1);
-			}
-
-			&:hover {
 				.spinner {
-					opacity: 1;
+					opacity: 0;
+					transition: all 0.5s;
+
+					@media (max-width: $screen-sm-min) {
+					}
+				}
+
+				img {
+					position: relative;
+					width: 150px;
+					height: 150px;
+					border-radius: 100%;
+					border: 8px solid rgba(0,0,0,0.1);
+				}
+
+				&:hover {
+					.spinner {
+						opacity: 1;
+					}
 				}
 			}
-		}
 
-		.detail {
-			text-align: left;
-			position: relative;
-			top: 18px;
+			.detail {
+				text-align: left;
+				position: relative;
+				top: 18px;
 
-			@media (max-width: $screen-sm-min) {
-				display: block;
-				text-align: center;
-			}
+				p {
+					margin-top: 10px;
+				}
 
-			code {
-				display: inline-block;
-				margin-bottom: 5px;
-				background-color: rgba(0,0,0,0.1);
+				@media (max-width: $screen-sm-min) {
+					display: block;
+					text-align: center;
+				}
+
+				code {
+					display: inline-block;
+					margin-bottom: 5px;
+					background-color: rgba(0,0,0,0.1);
+				}
 			}
 		}
 	}
