@@ -1,26 +1,19 @@
 {
-  "name": "arfianadam.github.io",
-  "version": "1.0.0",
-  "description": "My personal portfolio site",
-  "main": "index.js",
+  "name": "gatsby-starter-blog-theme",
+  "private": true,
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "bundle exec jekyll serve",
-    "watch": "gulp"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arfianadam/arfianadam.github.io.git"
-  },
-  "author": "Arfian Adam",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/arfianadam/arfianadam.github.io/issues"
-  },
-  "homepage": "https://github.com/arfianadam/arfianadam.github.io#readme",
+  "license": "0BSD",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^2.0.0"
+    "gatsby": "^2.24.54",
+    "gatsby-theme-blog": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "theme-ui": "0.4.0-alpha.3"
   }
 }
