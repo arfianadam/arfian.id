@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: `gatsby-theme-blog`,
       options: {},
-    },
+    }
   ],
   // Customize your site metadata:
   siteMetadata: {
